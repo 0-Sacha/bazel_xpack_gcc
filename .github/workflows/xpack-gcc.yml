@@ -1,0 +1,24 @@
+name: xpack-gcc
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  windows-latest-xpack_gcc:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: bazelbuild/setup-bazelisk@v3
+    - name: Mount bazel cache
+      uses: actions/cache@v4
+      with:
+        path: "~/.cache/bazel"
+        key: bazel
+    - name: Build HelloWorld on Xpack_gcc/gcc...
+      run: bazelisk build --config=xpack-gcc //HelloWorld:HelloWorld
+      working-directory: Examples

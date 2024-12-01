@@ -1,0 +1,5 @@
+bazel-bin
+bazel-examples
+bazel-bazel_xpack_gcc
+bazel-out
+bazel-testlogs
