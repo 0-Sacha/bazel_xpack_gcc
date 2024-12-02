@@ -9,8 +9,8 @@ on:
       - '**'
 
 jobs:
-  windows-latest-xpack_gcc:
-    runs-on: windows-latest
+  ubuntu-latest:
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
     - uses: bazelbuild/setup-bazelisk@v3
@@ -19,6 +19,6 @@ jobs:
       with:
         path: "~/.cache/bazel"
         key: bazel
-    - name: Build HelloWorld on Xpack_gcc/gcc...
-      run: bazelisk build --config=xpack-gcc //HelloWorld:HelloWorld
+    - name: Build and Test HelloWorld...
+      run: bazelisk test --config=xpack-gcc //HelloWorld:HelloWorld
       working-directory: Examples

@@ -99,7 +99,7 @@
     },
     "@@bazel_xpack_gcc~//:rules.bzl%xpack_gcc_toolchain_extension": {
       "general": {
-        "bzlTransitiveDigest": "w5N5OBmJPphW8/GMh/J0qJrCjDrSXHJ/OxRh4U2CA6Q=",
+        "bzlTransitiveDigest": "VeTHkEzXoDu9lCOfOkr8PG8G/ZDyR1nj+YHd34H97Ck=",
         "usagesDigest": "NPS+3mTGVgnKW1tRWlS1UJ4YW6JMK0nCto0ctMrxbJM=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},

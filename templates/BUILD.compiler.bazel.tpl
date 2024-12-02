@@ -7,77 +7,75 @@ filegroup(
     srcs = glob(["**"]),
 )
 
-###################
-####### gcc #######
-###################
 
 filegroup(
     name = "cpp",
-    srcs = ["bin/cpp%{extention}"],
+    srcs = ["bin/cpp"],
 )
 filegroup(
     name = "cc",
-    srcs = ["bin/gcc%{extention}"],
+    srcs = ["bin/gcc"],
 )
 filegroup(
     name = "cxx",
-    srcs = ["bin/g++%{extention}"],
+    srcs = ["bin/g++"],
 )
 filegroup(
     name = "as",
-    srcs = ["bin/as%{extention}"],
+    srcs = ["bin/as"],
 )
 filegroup(
     name = "ar",
-    srcs = ["bin/ar%{extention}"],
+    srcs = ["bin/ar"],
 )
 filegroup(
     name = "ld",
-    srcs = ["bin/ld%{extention}"],
+    srcs = ["bin/ld"],
 )
 
 filegroup(
     name = "objcopy",
-    srcs = ["bin/objcopy%{extention}"],
+    srcs = ["bin/objcopy"],
 )
 filegroup(
     name = "strip",
-    srcs = ["bin/strip%{extention}"],
+    srcs = ["bin/strip"],
 )
 
 filegroup(
     name = "cov",
-    srcs = ["bin/gcov%{extention}"],
+    srcs = ["bin/gcov"],
 )
 
 filegroup(
     name = "size",
-    srcs = ["bin/size%{extention}"],
+    srcs = ["bin/size"],
 )
 filegroup(
     name = "nm",
-    srcs = ["bin/nm%{extention}"],
+    srcs = ["bin/nm"],
 )
 filegroup(
     name = "objdump",
-    srcs = ["bin/objdump%{extention}"],
+    srcs = ["bin/objdump"],
 )
 filegroup(
     name = "dwp",
-    srcs = ["bin/dwp%{extention}"],
+    srcs = ["bin/dwp"],
 )
 
 filegroup(
     name = "dbg",
-    srcs = ["bin/gdb%{extention}"],
+    srcs = ["bin/gdb"],
 )
+
 
 filegroup(
     name = "toolchain_includes",
     srcs = glob([
-        "lib/gcc/x86_64-w64-mingw32/%{gcc_version}/include/**",
-        "lib/gcc/x86_64-w64-mingw32/%{gcc_version}/include-fixed/**",
-        "x86_64-w64-mingw32/include/**",
+        "lib/gcc/x86_64-pc-linux-gnu/%{gcc_version}/include/**",
+        "lib/gcc/x86_64-pc-linux-gnu/%{gcc_version}/include-fixed/**",
+        "x86_64-pc-linux-gnu/include/**",
         "include/**",
     ]),
 )
@@ -85,8 +83,8 @@ filegroup(
 filegroup(
     name = "toolchain_libs",
     srcs = glob([
-        "lib/gcc/x86_64-w64-mingw32/%{gcc_version}/*",
-        "x86_64-w64-mingw32/lib/*",
+        "lib/gcc/x86_64-pc-linux-gnu/%{gcc_version}/*",
+        "x86_64-pc-linux-gnu/lib/*",
         "lib/*",
     ]),
 )
@@ -94,7 +92,7 @@ filegroup(
 filegroup(
     name = "toolchain_bins",
     srcs = glob([
-        "x86_64-w64-mingw32/bin/*%{extention}",
-        "bin/*%{extention}",
+        "x86_64-pc-linux-gnu/bin/*",
+        "bin/*",
     ]),
 )
