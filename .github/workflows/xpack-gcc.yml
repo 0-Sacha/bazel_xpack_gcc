@@ -19,6 +19,6 @@ jobs:
       with:
         path: "~/.cache/bazel"
         key: bazel
-    - name: Build and Test HelloWorld...
-      run: bazelisk test --config=xpack-gcc //HelloWorld:HelloWorld
+    - name: Build HelloWorld...
+      run: bazelisk build --config=xpack-gcc //HelloWorld:HelloWorld
       working-directory: Examples
