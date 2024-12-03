@@ -1,4 +1,4 @@
 
 common --incompatible_strict_action_env
 
-common:xpack_gcc --extra_toolchains=@xpack_gcc//:toolchain
+common:xpack-gcc --extra_toolchains=@xpack_gcc//:toolchain
