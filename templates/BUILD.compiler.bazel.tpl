@@ -77,7 +77,7 @@ filegroup(
         "lib/gcc/x86_64-pc-linux-gnu/%{gcc_version}/include-fixed/**",
         "x86_64-pc-linux-gnu/include/**",
         "include/**",
-    ]),
+    ], allow_empty = True),
 )
 
 filegroup(
@@ -86,7 +86,7 @@ filegroup(
         "lib/gcc/x86_64-pc-linux-gnu/%{gcc_version}/*",
         "x86_64-pc-linux-gnu/lib/*",
         "lib/*",
-    ]),
+    ], allow_empty = True),
 )
 
 filegroup(
@@ -94,5 +94,5 @@ filegroup(
     srcs = glob([
         "x86_64-pc-linux-gnu/bin/*",
         "bin/*",
-    ]),
+    ], allow_empty = True),
 )
