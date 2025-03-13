@@ -60,11 +60,7 @@ cc_toolchain_config(
     linkopts = %{linkopts},
     defines = %{defines},
     includedirs = %{includedirs},
-    linkdirs = [
-        "%{compiler_package_path}lib/gcc/x86_64-pc-linux-gnu/%{gcc_version}",
-        "%{compiler_package_path}x86_64-pc-linux-gnu/lib",
-    ] + %{linkdirs},
-
+    linkdirs = %{linkdirs},
     linklibs = %{linklibs},
 )
 

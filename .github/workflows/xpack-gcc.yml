@@ -21,4 +21,4 @@ jobs:
         key: bazel
     - name: Build HelloWorld...
       run: bazelisk build --config=xpack-gcc //HelloWorld:HelloWorld
-      working-directory: Examples
+      working-directory: examples
