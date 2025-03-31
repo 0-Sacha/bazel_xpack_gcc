@@ -52,7 +52,10 @@ cc_toolchain_config(
         "%{compiler_package_path}include/c++/%{gcc_version}/x86_64-pc-linux-gnu",
 
         "/usr/include",
-    ],
+    ] + %{toolchain_builtin_includedirs_isystem},
+    
+    toolchain_builtin_includedirs = [
+    ] + %{toolchain_builtin_includedirs},
 
     copts = %{copts}, # [ "--no-standard-includes" ]
     conlyopts = %{conlyopts},
